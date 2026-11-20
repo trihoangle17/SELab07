@@ -1,0 +1,15 @@
+@page
+@model SchoolAppCore.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>School Management Web Application (ASP.NET Core Razor Pages)</h2>
+<p>Welcome to <b>SchoolAppCore</b> connected to <code>SchoolDB</code> via <b>Entity Framework Core (Database-First Approach)</b>.</p>
+<ul>
+    <li><a asp-page="/Students/Index">Manage Students</a> (<code>/Students/Index</code>)</li>
+    <li><a asp-page="/Courses/Index">Manage Courses</a> (<code>/Courses/Index</code>)</li>
+    <li><a asp-page="/Instructors/Index">Manage Instructors</a> (<code>/Instructors/Index</code>)</li>
+    <li><a asp-page="/Enrollments/Index">Manage Enrollments</a> (<code>/Enrollments/Index</code>)</li>
+    <li><a asp-page="/Departments/Index">Manage Departments</a> (<code>/Departments/Index</code>)</li>
+</ul>

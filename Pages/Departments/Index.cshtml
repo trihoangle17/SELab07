@@ -1,0 +1,32 @@
+@page
+@model SchoolAppCore.Pages.Departments.IndexModel
+@{
+    ViewData["Title"] = "Departments";
+}
+
+<h2>Departments List (ASP.NET Core Razor Pages - CRUD)</h2>
+<p><a class="btn" asp-page="Create">+ Create New Department</a></p>
+<table>
+    <thead>
+        <tr>
+            <th>DepartmentID</th>
+            <th>Name</th>
+            <th>Budget</th>
+            <th>StartDate</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Departments) {
+        <tr>
+            <td>@item.DepartmentID</td>
+            <td>@item.Name</td>
+            <td>$@item.Budget.ToString("N2")</td>
+            <td>@item.StartDate.ToString("yyyy-MM-dd")</td>
+            <td class="action-links">
+                <a href="#">Edit</a> | <a href="#">Details</a> | <a href="#">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
